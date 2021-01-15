@@ -26,6 +26,7 @@
       "node_modules/@types",
       "./typings"
     ],
+    "strictPropertyInitialization": false, //추가: 컴파일 오류 제거
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
