@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import type { AppProps /*, AppContext */ } from 'next/app';
 import Sidebar from '../components/sidebar';
+import 'react-dropzone-uploader/dist/styles.css'
+import '../components/dropzone.css'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (

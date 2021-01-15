@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { NextPage, NextPageContext } from 'next';
+import DropzoneUploader from '../../components/dropzone';
 
 interface Props {
   query: { name?: string };
@@ -11,6 +12,7 @@ const Home: NextPage<Props> = ({ query }) => {
   return (
     <div>
       <div>Hello, {greetName}!</div>
+      <DropzoneUploader></DropzoneUploader>
     </div>
   );
 };

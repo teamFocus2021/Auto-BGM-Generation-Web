@@ -13,7 +13,7 @@ const Sidebar: FC = () => {
               textTransform: 'uppercase',
             }}
           >
-            EXAMPLE APP
+            BEAN POD
           </a>
         </Link>
       </div>
