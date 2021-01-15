@@ -3,18 +3,6 @@ import * as React from 'react'
 import Link from 'next/link';
 import Dropzone, { IDropzoneProps, ILayoutProps } from 'react-dropzone-uploader'
 
-// const Layout = ({ input, previews, submitButton, dropzoneProps, files, extra: { maxFiles } }: ILayoutProps) => {
-//     return (
-//       <div>
-//         {previews}
-  
-//         <div {...dropzoneProps}>{files.length < maxFiles && input}</div>
-  
-//         {files.length > 0 && submitButton}
-//       </div>
-//     )
-// }
-
 const DropzoneUploader: FC = () => {
     
     const getUploadParams: IDropzoneProps['getUploadParams'] = () => ({ url: 'localhost:3000/about' })

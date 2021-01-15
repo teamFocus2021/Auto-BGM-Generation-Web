@@ -1,16 +1,17 @@
 import { FC } from 'react';
 import type { AppProps /*, AppContext */ } from 'next/app';
-import Sidebar from '../components/sidebar';
+import Sidebar from '../components/navbar';
 import 'react-dropzone-uploader/dist/styles.css'
 import '../components/dropzone.css'
+import '../components/about.css'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <div style={{ display: 'flex', maxWidth: 1100 }}>
-      <div style={{ flexBasis: '30%', margin: 25 }}>
+    <div>
+      <div>
         <Sidebar />
       </div>
-      <div style={{ flexBasis: '70%', margin: 25 }}>
+      <div>
         <Component {...pageProps} />
       </div>
     </div>
