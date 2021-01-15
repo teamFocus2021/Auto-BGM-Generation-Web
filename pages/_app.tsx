@@ -4,6 +4,7 @@ import Sidebar from '../components/navbar';
 import 'react-dropzone-uploader/dist/styles.css'
 import '../components/dropzone.css'
 import '../components/about.css'
+import '../components/button.css'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (

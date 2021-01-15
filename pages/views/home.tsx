@@ -1,30 +1,15 @@
-import * as React from 'react';
-import { NextPage, NextPageContext } from 'next';
-import DropzoneUploader from '../../components/dropzone';
+import { FC } from 'react';
 import Link from 'next/link';
 
-interface Props {
-  query: { name?: string };
-}
-
-const Home: NextPage<Props> = ({ query }) => {
-  const greetName = query.name ? query.name : 'World';
+const Home: FC = ({}) => {
 
   return (
     <div>
-      <div>Hello, {greetName}!</div>
-      <Link href="/start" as="/start">
-        <button>TRY YOUR VIDEO</button>
+      <Link href="/views/start" as="/start">
+        <a className="startbutton">TRY YOUR VIDEO</a>
       </Link>
     </div>
   );
 };
-
-export async function getServerSideProps(ctx: NextPageContext) {
-  const query = {
-    name: ctx.query.name || null,
-  };
-  return { props: { query } };
-}
 
 export default Home;
