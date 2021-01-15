@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { NextPage, NextPageContext } from 'next';
 import DropzoneUploader from '../../components/dropzone';
+import Link from 'next/link';
 
 interface Props {
   query: { name?: string };
@@ -12,7 +13,9 @@ const Home: NextPage<Props> = ({ query }) => {
   return (
     <div>
       <div>Hello, {greetName}!</div>
-      <DropzoneUploader></DropzoneUploader>
+      <Link href="/start" as="/start">
+        <button>TRY YOUR VIDEO</button>
+      </Link>
     </div>
   );
 };

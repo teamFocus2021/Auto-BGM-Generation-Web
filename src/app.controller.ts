@@ -13,4 +13,10 @@ export class AppController {
   public about() {
     return {};
   }
+
+  @Render('start')
+  @Get('/start')
+  public start() {
+    return {};
+  }
 }

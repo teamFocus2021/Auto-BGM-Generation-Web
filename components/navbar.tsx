@@ -18,7 +18,7 @@ const Navbar: FC = () => {
         </Link>
       </div>
         <div style={{ flexBasis: '5%', marginLeft: "10px" }}>
-          <Link href="/views/home" as="/">
+          <Link href="/views/start" as="/start">
             <a>START</a>
           </Link>
         </div>
@@ -28,12 +28,12 @@ const Navbar: FC = () => {
           </Link>
         </div>
         <div style={{ flexBasis: '5%', marginLeft: "10px" }}>
-          <Link href="/views/home" as="/">
+          <Link href="/views/music" as="/music">
             <a>MUSIC</a>
           </Link>
         </div>
         <div style={{ flexBasis: '5%', marginLeft: "10px" }}>
-          <Link href="/views/home" as="/">
+          <Link href="/views/connect" as="/connect">
             <a>CONNECT</a>
           </Link>
         </div>
