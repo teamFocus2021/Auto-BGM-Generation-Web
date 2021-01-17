@@ -1,14 +1,13 @@
-import { FC, Component } from 'react';
+import { FC } from 'react';
 import * as React from 'react'
-import Link from 'next/link';
-import Dropzone, { IDropzoneProps, ILayoutProps } from 'react-dropzone-uploader'
+import Dropzone, { IDropzoneProps } from 'react-dropzone-uploader'
 
 const DropzoneUploader: FC = () => {
-    
-    const getUploadParams: IDropzoneProps['getUploadParams'] = () => ({ url: 'localhost:3000/about' })
 
-    const handleChangeStatus: IDropzoneProps['onChangeStatus'] = ({ meta, remove }, status) => {
-        console.log(status, meta)
+    const getUploadParams: IDropzoneProps['getUploadParams'] = () => ({ url: '/upload' })
+
+    const handleChangeStatus: IDropzoneProps['onChangeStatus'] = ({ meta }) => {
+        console.log(meta)
     }
 
     const handleSubmit: IDropzoneProps['onSubmit'] = (files, allFiles) => {
@@ -29,6 +28,7 @@ const DropzoneUploader: FC = () => {
             inputContent={(files, extra) => (extra.reject ? 'Only Video File!' : 'Drop or Browse A Video File')}
             styles={{
                 dropzoneReject: { borderColor: 'red', backgroundColor: '#DAA' },
+                dropzoneActive: { borderColor: 'blue', backgroundColor: '#D3BEEA' },
                 inputLabel: (files, extra) => (extra.reject ? { color: 'red' } : {}),
             }}
         />

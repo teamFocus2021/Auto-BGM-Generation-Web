@@ -1,3 +1,44 @@
 .dzu-dropzone {
     overflow: hidden;
+    white-space: nowrap;
+    min-width: 300px;
+    border: transparent;
+}
+
+.dzu-inputLabel {
+    color: white;
+}
+
+.dzu-previewContainer {
+    border-bottom: 3px solid #ECECEC;
+}
+
+element.style{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUuMCwgMC4wKSIgZmlsbD0iIzMzMzMzMyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNC4wLCAwLjApIj48cG9seWdvbiBwb2ludHM9IjcuNzE5IDQuOTY0IDEyLjY5MiAwLjAxNyAxNC4zODkgMS43MTUgOS40MTIgNi42NjYgMTQuMzU0IDExLjYzNCAxMi42NTcgMTMuMzMxIDYuMDE3IDYuNjU3IDcuNzE1IDQuOTYwIj48L3BvbHlnb24+PHBvbHlnb24gcG9pbnRzPSI3LjYxMiA0Ljk2NCA3LjYxNiA0Ljk2MCA5LjMxMyA2LjY1NyAyLjY3NCAxMy4zMzEgMC45NzcgMTEuNjM0IDUuOTE5IDYuNjY2IDAuOTQyIDEuNzE1IDIuNjM5IDAuMDE3Ij48L3BvbHlnb24+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.dzu-submitButton {
+    padding: 0 14px;
+    min-height: 32px;
+    background-color: #E9A451   ;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFF;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+.dzu-previewFileName {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+#toast {
+    display: none;
 }

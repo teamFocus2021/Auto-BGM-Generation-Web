@@ -9,7 +9,7 @@ interface Props {
 const Start: NextPage<Props> = () => {
 
   return (
-    <div>
+    <div className="main_div">
       <DropzoneUploader></DropzoneUploader>
     </div>
   );

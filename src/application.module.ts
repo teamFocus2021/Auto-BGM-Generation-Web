@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import Next from 'next';
 import { AppController } from './app.controller';
 import { UserModule } from './UserComponent/user.module';
+import { MulterModule } from '@nestjs/platform-express';
 
 @Module({
   imports: [
@@ -28,4 +29,12 @@ import { UserModule } from './UserComponent/user.module';
   controllers: [AppController],
   providers: [],
 })
+
+@Module({
+  imports: [MulterModule.register({
+    dest: './upload',
+  })],
+  controllers: [AppController],
+})
+
 export class AppModule {}

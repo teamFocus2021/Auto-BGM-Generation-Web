@@ -6,35 +6,29 @@ const Navbar: FC = () => {
     <div style={{ display: 'flex', marginTop: "40px", marginBottom: "40px", marginLeft: "20px", marginRight: "20px" }}>
       <div style={{ flexBasis: '80%' }}>
         <Link href="/views/home" as="/">
-          <a
-            style={{
-              fontSize: 22,
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-            }}
-          >
-            BEAN POD
+          <a className="nav_button no_split">
+            Bean Pod
           </a>
         </Link>
       </div>
-        <div style={{ flexBasis: '5%', marginLeft: "10px" }}>
+        <div className="nav_button">
           <Link href="/views/start" as="/start">
-            <a>START</a>
+            <a className="nav_button">START</a>
           </Link>
         </div>
-        <div style={{ flexBasis: '5%', marginLeft: "10px" }}>
+        <div className="nav_button">
           <Link href="/views/about" as="/about">
-            <a>DETAIL</a>
+            <a className="nav_button">DETAIL</a>
           </Link>
         </div>
-        <div style={{ flexBasis: '5%', marginLeft: "10px" }}>
+        <div className="nav_button">
           <Link href="/views/music" as="/music">
-            <a>MUSIC</a>
+            <a className="nav_button">MUSIC</a>
           </Link>
         </div>
-        <div style={{ flexBasis: '5%', marginLeft: "10px" }}>
+        <div className="nav_button">
           <Link href="/views/connect" as="/connect">
-            <a>CONNECT</a>
+            <a className="nav_button">CONNECT</a>
           </Link>
         </div>
     </div>

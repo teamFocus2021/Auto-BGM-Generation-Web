@@ -1,4 +1,7 @@
-import { Controller, Get, Query, Render } from '@nestjs/common';
+import { Controller, Get, Post, Query, Render, UseInterceptors, UploadedFile, Res, Param } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
+import { diskStorage } from 'multer';
+import { editFileName, videoFileFilter } from './utils/file-upload.utils';
 
 @Controller()
 export class AppController {
@@ -19,4 +22,29 @@ export class AppController {
   public start() {
     return {};
   }
+
+  @Render('start')
+  @Post('upload')
+  @UseInterceptors(
+    FileInterceptor('file', {
+      storage: diskStorage({
+        destination: './upload',
+        filename: editFileName,
+      }),
+      fileFilter: videoFileFilter,
+    }),
+  )
+  async uploadedFile(@UploadedFile() file: any) {
+    const response = {
+      originalname: file.originalname,
+      filename: file.filename,
+    };
+    return response;
+  }
+
+  @Get(':filepath')
+  seeUploadedFile(@Param('filepath') file: any, @Res() res: any) {
+    return res.sendFile(file, { root: './upload' });
+  }
 }
+

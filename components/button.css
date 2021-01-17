@@ -1,6 +1,6 @@
-.startbutton {
+.start_button {
     min-width: 320px;
-    text-decoration:none;
+    text-decoration: none;
     border-radius: 10rem;
     padding-left: 80px;
     padding-right: 80px;
@@ -9,7 +9,15 @@
     font-size: 18px;
     color: white;
     border-color: transparent;
-    background-color: #F2A057;
+    background-color: #E9A451;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     white-space: nowrap;
+    
+}
+
+.nav_button {
+    text-decoration: none;
+    flex-basis: 5%;
+    margin-left: 1rem;
+    color: white;
 }
