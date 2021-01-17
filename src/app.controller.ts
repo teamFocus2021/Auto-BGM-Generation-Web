@@ -42,9 +42,11 @@ export class AppController {
     return response;
   }
 
+  /*
   @Get(':filepath')
   seeUploadedFile(@Param('filepath') file: any, @Res() res: any) {
     return res.sendFile(file, { root: './upload' });
   }
+  */
 }
 

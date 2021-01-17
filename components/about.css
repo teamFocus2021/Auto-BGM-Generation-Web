@@ -9,11 +9,14 @@
 }
 
 html {
-    background-color: #EABDAD;
+    background-image: url("./assets/background.png");
+    background-size: 100% 768px;
+    background-repeat: no-repeat;
+    min-width: 800px;
 }
 
 .main_div {
     margin-top: 10rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 60px;
+    margin-right: 60px;
 }

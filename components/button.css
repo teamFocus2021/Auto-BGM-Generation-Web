@@ -19,5 +19,12 @@
     text-decoration: none;
     flex-basis: 5%;
     margin-left: 1rem;
+    margin-top: 10px;
     color: white;
+    vertical-align: middle;
 }
+
+ .logo {
+     height: 50px;
+     width: 200px;
+ }

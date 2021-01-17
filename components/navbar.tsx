@@ -6,8 +6,8 @@ const Navbar: FC = () => {
     <div style={{ display: 'flex', marginTop: "40px", marginBottom: "40px", marginLeft: "20px", marginRight: "20px" }}>
       <div style={{ flexBasis: '80%' }}>
         <Link href="/views/home" as="/">
-          <a className="nav_button no_split">
-            Bean Pod
+          <a>
+            <img className="logo" src='http://sehwa98.dothome.co.kr/mp3/logo.png' />
           </a>
         </Link>
       </div>

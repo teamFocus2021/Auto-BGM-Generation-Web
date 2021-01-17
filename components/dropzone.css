@@ -3,6 +3,8 @@
     white-space: nowrap;
     min-width: 300px;
     border: transparent;
+    background-color: hsla(33, 78%, 62%, 0.8);
+    height: 15rem;
 }
 
 .dzu-inputLabel {
@@ -39,6 +41,15 @@ element.style{
     color: white;
 }
 
+.dzu-previewStatusContainer {
+    display: none;
+}
+
 #toast {
     display: none;
+}
+
+.dzu-submitButtonContainer {
+    margin-top: 80px 0;
+    z-index: 1;
 }

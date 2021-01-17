@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import * as React from 'react'
 import Dropzone, { IDropzoneProps } from 'react-dropzone-uploader'
+import { useRouter } from 'next/router'
 
 const DropzoneUploader: FC = () => {
 
@@ -11,6 +12,7 @@ const DropzoneUploader: FC = () => {
     }
 
     const handleSubmit: IDropzoneProps['onSubmit'] = (files, allFiles) => {
+        const router = useRouter()
         console.log(files.map(f => f.meta))
         allFiles.forEach(f => f.remove())
     }
@@ -27,8 +29,8 @@ const DropzoneUploader: FC = () => {
             accept="video/*"
             inputContent={(files, extra) => (extra.reject ? 'Only Video File!' : 'Drop or Browse A Video File')}
             styles={{
-                dropzoneReject: { borderColor: 'red', backgroundColor: '#DAA' },
-                dropzoneActive: { borderColor: 'blue', backgroundColor: '#D3BEEA' },
+                dropzoneReject: { borderColor: 'red', backgroundColor: 'hsl(0, 34%, 72%, 0.8)' },
+                dropzoneActive: { borderColor: 'blue', backgroundColor: 'hsl(269, 51%, 83%, 0.8)' },
                 inputLabel: (files, extra) => (extra.reject ? { color: 'red' } : {}),
             }}
         />
