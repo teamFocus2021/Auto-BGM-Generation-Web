@@ -5,26 +5,34 @@ import { editFileName, videoFileFilter } from './utils/file-upload.utils';
 
 @Controller()
 export class AppController {
-  @Render('home')
+  
   @Get()
-  public index(@Query('name') name?: string) {
-    return { name };
+  @Render('home')
+  public home() {
   }
 
-  @Render('about')
-  @Get('/about')
-  public about() {
-    return {};
-  }
-
-  @Render('start')
   @Get('/start')
+  @Render('start')
   public start() {
-    return {};
+  } 
+
+  @Get('/about')
+  @Render('about')
+  public about() {
   }
 
-  @Render('start')
-  @Post('upload')
+  @Get('/music')
+  @Render('music')
+  public music() {
+  }
+
+  @Get('/connect')
+  @Render('connect')
+  public connect() {
+  }
+
+  @Post('/handle')
+  @Render('handle')
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({
@@ -42,11 +50,10 @@ export class AppController {
     return response;
   }
 
-  /*
   @Get(':filepath')
+  @Render('handle')
   seeUploadedFile(@Param('filepath') file: any, @Res() res: any) {
     return res.sendFile(file, { root: './upload' });
   }
-  */
 }
 

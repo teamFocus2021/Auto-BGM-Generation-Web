@@ -1,18 +1,22 @@
 import { FC } from 'react';
 import * as React from 'react'
 import Dropzone, { IDropzoneProps } from 'react-dropzone-uploader'
-import { useRouter } from 'next/router'
+import SubmitButton from './SubmitButton'
 
 const DropzoneUploader: FC = () => {
 
-    const getUploadParams: IDropzoneProps['getUploadParams'] = () => ({ url: '/upload' })
+    const getUploadParams: IDropzoneProps['getUploadParams'] = ({ meta }) => { 
+        const url = '/handle'
+        const fileUrl = `${url}/${encodeURIComponent(meta.name)}`
+        return { url, meta: { fileUrl } } 
+    }
 
     const handleChangeStatus: IDropzoneProps['onChangeStatus'] = ({ meta }) => {
-        console.log(meta)
+        console.log("meta: " + meta)
     }
 
     const handleSubmit: IDropzoneProps['onSubmit'] = (files, allFiles) => {
-        const router = useRouter()
+        console.log("param: " + getUploadParams)
         console.log(files.map(f => f.meta))
         allFiles.forEach(f => f.remove())
     }
@@ -22,6 +26,7 @@ const DropzoneUploader: FC = () => {
         <Dropzone
             getUploadParams={getUploadParams}
             onChangeStatus={handleChangeStatus}
+            SubmitButtonComponent={SubmitButton}
             maxFiles={1}
             multiple={false}
             canCancel={false}
