@@ -31,6 +31,12 @@ export class AppController {
   public connect() {
   }
 
+  //video processing main page
+  @Get('/make')
+  @Render('make')
+  public make() {
+  }
+
   @Post('/handle')
   @Render('handle')
   @UseInterceptors(

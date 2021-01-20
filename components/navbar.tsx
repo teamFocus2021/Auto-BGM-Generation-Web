@@ -31,6 +31,14 @@ const Navbar: FC = () => {
             <a className="nav_button">CONNECT</a>
           </Link>
         </div>
+
+        {/*make video session*/}
+        <div className="nav_button">
+          <Link href="/views/make" as="/make">
+            <a className="nav_button">MAKE</a>
+          </Link>
+        </div>
+
     </div>
   );
 };
