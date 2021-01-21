@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { NextPage } from 'next';
+import { FC } from 'react';
+import MusicCategory from '../../components/music_category'
 
-const Page: NextPage = () => {
-  return <div className="main_div">
-    <p className="explanation">
-      This is Music List!
-    </p>
-  </div>;
+const Page: FC= () => {
+  return  <div className="main_div">
+            <MusicCategory />
+          </div>;
 };
 
 export default Page;

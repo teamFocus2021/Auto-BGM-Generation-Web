@@ -28,3 +28,7 @@
      height: 50px;
      width: 200px;
  }
+
+ .player {
+     background-color: hsla(268, 100%, 92%, 0.5);
+ }

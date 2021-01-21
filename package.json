@@ -12,9 +12,11 @@
     "start": "cross-env NODE_ENV=production node .next/production-server/src/main.js"
   },
   "dependencies": {
+    "@bumaga/tabs": "^0.2.0",
     "@nestjs/common": "^6.11.11",
     "@nestjs/core": "^6.5.3",
     "@nestjs/platform-express": "^6.5.3",
+    "@types/react-tabs": "^2.3.2",
     "cross-env": "^6.0.3",
     "mysql": "^2.18.1",
     "nest-next": "^9.3.0",
@@ -23,6 +25,8 @@
     "react": "17",
     "react-dom": "17",
     "react-dropzone-uploader": "^2.11.0",
+    "react-h5-audio-player": "^3.5.0",
+    "react-tabs": "^3.1.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2"
   },
