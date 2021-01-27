@@ -7,6 +7,7 @@ const Navbar: FC = () => {
       <div style={{ flexBasis: '80%' }}>
         <Link href="/views/home" as="/">
           <a>
+            {/*태그가 안 먹힘, 노래 목록도 마찬가지, 도메인 접속에 문제가 있는지 확인할 것*/}
             <img className="logo" src='http://sehwa98.dothome.co.kr/mp3/logo.png' />
           </a>
         </Link>
