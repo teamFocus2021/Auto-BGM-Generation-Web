@@ -44,7 +44,12 @@ export class AppController {
     //python 파일 실행하기 shelljs 생성 -> exec로 실행하기 
     console.log("serverside");
     const shell = require('shelljs')
-    
+    shell.exec('node NewVideo.js') 
+
+    //cmd창에서만 실행됨, why? > newVideo를 결과물로 가짐!
+    //오류, 왜 실행이 안되지? cmd 창에서 직접 실행하는 것만 되고 명령어로 실행 안됨
+
+    /*
     function toFrame(){
       if (shell.exec('python ToFrame.py').code !== 0) {
           shell.echo('Error: python toFrame failed')
@@ -63,11 +68,13 @@ export class AppController {
     setTimeout(() => faceApi(), 10);
     
     console.log("command compelete!");
+    */
 
     return {
       //title value 값 넘겨서 받아주는지 확인하는 테스트
       //비디오 프로세싱 과정에서는 우선 신경쓰지 않아도 됨
       title: 'Nest with Next'
+      
     }
   }
   @Post('/handle')
