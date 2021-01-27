@@ -14,7 +14,7 @@ const MusicCategory: FC = () => {
                     <Tab>Fear / Angry</Tab>
                     <Tab>Surprise / Disgust</Tab>
                 </TabList>
-                <TabPanel>
+                {/* <TabPanel>
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(1).mp3" customAdditionalControls={[]} footer="Smile(1)"/>
                     <br/>
@@ -128,7 +128,7 @@ const MusicCategory: FC = () => {
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise(10).mp3" customAdditionalControls={[]} footer="Surprise(10)"/>
                     <br/>
-                </TabPanel>
+                </TabPanel> */}
             </Tabs>
     )
 }
