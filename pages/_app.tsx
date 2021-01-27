@@ -5,6 +5,7 @@ import 'react-dropzone-uploader/dist/styles.css'
 import '../components/dropzone.css'
 import '../components/about.css'
 import '../components/button.css'
+import '../components/editor.css'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (

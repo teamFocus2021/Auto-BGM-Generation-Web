@@ -1,0 +1,18 @@
+.music_list{
+    width: 400px;
+    float: right;
+
+}
+
+.video_player{
+    width: 550px;
+    height: 550px;
+    float: left;
+}
+
+
+.frame_list img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}

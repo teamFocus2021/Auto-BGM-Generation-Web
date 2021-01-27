@@ -37,6 +37,11 @@ export class AppController {
   public make() {
   }
 
+  @Get('/editor')
+  @Render('editor')
+  public editor() {
+  }
+
   @Post('/handle')
   @Render('handle')
   @UseInterceptors(
