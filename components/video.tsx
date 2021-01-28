@@ -10,7 +10,7 @@ const VideoPlayer: FC = () => {
       <div className='player-wrapper'>
         <ReactPlayer
           className='react-player fixed-bottom'
-          url= 'https://storage.googleapis.com/auto-bgm-generation-web/test.mp4'
+          url= 'https://storage.googleapis.com/store_video2/test.mp4'
           controls = {true}
 
         />

@@ -1,19 +1,31 @@
 import React from 'react';
 import { NextPageContext } from 'next';
 import Head from 'next/head';
+import MusicCategory from '../../components/music_category'
+import VideoPlayer from '../../components/video'
+import Frames from '../../components/frames'
 
 type IndexProps = {
     query : {
-        title: string
+        emotions: string
     }
 }
 export default function Make(props: IndexProps) {
-    const { title } = props.query;
+    const { emotions } = props.query;
     return (
         <>
-            <Head><title>{title}</title></Head>
-            <div>
-                타이틀은 {title} 입니다.
+            {/* <div>
+                {emotions}
+            </div> */}
+
+            <div className="video_player">            
+                <VideoPlayer />
+            </div>
+            <div className="music_list">            
+                <MusicCategory />
+            </div>
+            <div className="frame_list">            
+                <Frames />
             </div>
         </>
     )
