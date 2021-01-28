@@ -82,7 +82,7 @@ export class AppController {
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({
-        destination: './upload',
+        destination: './upload/original_video',
         filename: editFileName,
       }),
       fileFilter: videoFileFilter,
@@ -99,7 +99,7 @@ export class AppController {
   @Get(':filepath')
   @Render('handle')
   seeUploadedFile(@Param('filepath') file: any, @Res() res: any) {
-    return res.sendFile(file, { root: './upload' });
+    return res.sendFile(file, { root: './upload/original_video' });
   }
 }
 
