@@ -65,12 +65,12 @@ function mergeVideo(video, new_name) {
             });      
         }
     })
-    fs.readdir('save_img', (err, files) => {
+    fs.readdir('upload/frames', (err, files) => {
         if(err)
             console.log(err);
         else{
             for(let file of files){
-                fs.unlink('./save_img/' + file, (err) => {
+                fs.unlink('./upload/frames/' + file, (err) => {
                     if(err)
                         console.log(err);
                     else{
@@ -78,19 +78,12 @@ function mergeVideo(video, new_name) {
                 })
             }
             //save directory 삭제
-            fs.rmdir("save_img", () => { 
+            fs.rmdir("upload/frames", () => { 
               });                  
         }
     })
 
 };
-
-// example
-cutVideo('surprise', 5, "0000");
-cutVideo('surprise', 3, "0005");
-cutVideo('surprise', 2, "0008");
-setTimeout(() => concatVideo(), 10);
-setTimeout(() => mergeVideo(), 10);
 
 
 module.exports = makeVideo;

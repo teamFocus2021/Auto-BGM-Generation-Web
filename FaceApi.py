@@ -8,10 +8,10 @@ client_secret = "lDeEYya5VI"  # private info
 url = "https://openapi.naver.com/v1/vision/face"  # 얼굴 감지
 headers = {'X-Naver-Client-Id': client_id, 'X-Naver-Client-Secret': client_secret}
 
-file_count = len(os.walk(os.getcwd()+'/save_img').__next__()[2])  # save_img directory 내의 파일 개수
+file_count = len(os.walk(os.getcwd()+'/upload/frames').__next__()[2])  # save_img directory 내의 파일 개수
 
 
-path_dir = './save_img/'
+path_dir = './upload/frames/'
 file_list = os.listdir(path_dir)
 file_list.sort()
 last_file = ''
@@ -115,7 +115,7 @@ if total == 4:
     news['total'] = 'surprise'
 
 # json 파일로 저장
-with open('./emotions.json', 'w', encoding='utf-8') as make_file:
+with open('./upload/emotion/emotions.json', 'w', encoding='utf-8') as make_file:
     json.dump(news, make_file, indent="\t")
 
 # # 저장한 파일 출력하기

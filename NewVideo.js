@@ -4,8 +4,8 @@ const shell = require('shelljs');
 
 // 업로드하면 얻는 파일 이름을 fime_name 초기화, 파일이름 설정하면 new_name 초기화
 // 음악 클릭하면 그에 맞게 emotions.json 변경
-const file_name = './upload/test.mp4';
-const new_name = 'new_video.mp4';
+const file_name = './upload/original_video/test.mp4';
+const new_name = './upload/new_video/new_video.mp4';
 var music  = {};
 
 //------영상처리 and 감정분석------
@@ -17,7 +17,7 @@ deleteFile();
 setTimeout(() => makeVideo(), 10);
 
 function makeVideo(){
-    const data = JSON.parse(fs.readFileSync('emotions.json', 'utf8'));
+    const data = JSON.parse(fs.readFileSync('upload/emotion/emotions.json', 'utf8'));
 
     keys = Object.keys(data)
     
@@ -69,7 +69,7 @@ function makeVideo(){
 
     setTimeout(() => {
         var json = JSON.stringify(music);
-        fs.appendFile('music.json', json , 'utf8', function (err) {
+        fs.appendFile('upload/emotion/music.json', json , 'utf8', function (err) {
             if (err) throw err;
           }); 
     }, 10)
@@ -176,20 +176,20 @@ function mergeVideo(video, new_name) {
     //     if( err ) throw err;
     // });
 
-    // fs.readdir('save_img', (err, files) => {
+    // fs.readdir('upload/frames', (err, files) => {
     //     if(err)
     //         console.log(err);
     //     else{
     //         // for(let file of files){
-    //         //     fs.unlink('./save_img/' + file, (err) => {
+    //         //     fs.unlink('./upload/frames/' + file, (err) => {
     //         //         if(err)
     //         //             console.log(err);
     //         //         else{
     //         //         }
     //         //     })
     //         // }                                    
-    //         //save directory 삭제
-    //         fs.rmdir("save_img", () => { 
+    //         //upload/frames directory 삭제
+    //         fs.rmdir("upload/frames", () => { 
     //           });                  
     //     }
     // })
@@ -229,8 +229,8 @@ function deleteFile(){
 
 // 0.5초 간격으로 영상 이미지 처리
 function toFrame(file_name){
-    !fs.existsSync('save_img') && fs.mkdirSync('save_img');
-    if (shell.exec(`ffmpeg -i ${file_name} -vf fps=1 save_img/%04d.jpg`).code !== 0) {
+    !fs.existsSync('upload/frames') && fs.mkdirSync('upload/frames');
+    if (shell.exec(`ffmpeg -i ${file_name} -vf fps=1 upload/frames/%04d.jpg`).code !== 0) {
         shell.echo('Error: cut frame failed')
         shell.exit(1)
     }
