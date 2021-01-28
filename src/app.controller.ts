@@ -40,35 +40,15 @@ export class AppController {
   @Get('/make')
   @Render('make')
   public make() {
-    //serverside에서 Nest.js 차원에서 command 명령어 실행하여
-    //python 파일 실행하기 shelljs 생성 -> exec로 실행하기 
+
+    
+//serverside에서 Nest.js 차원에서 command 명령어 실행하여
+//python 파일 실행하기 shelljs 생성 -> exec로 실행하기 
+
     console.log("serverside");
     const shell = require('shelljs')
+    shell.exec('python GoogleStorage.py') 
     shell.exec('node NewVideo.js') 
-
-    //cmd창에서만 실행됨, why? > newVideo를 결과물로 가짐!
-    //오류, 왜 실행이 안되지? cmd 창에서 직접 실행하는 것만 되고 명령어로 실행 안됨
-
-    /*
-    function toFrame(){
-      if (shell.exec('python ToFrame.py').code !== 0) {
-          shell.echo('Error: python toFrame failed')
-          shell.exit(1)
-      }
-    }
-    function faceApi(){
-        if (shell.exec('python FaceApi.py').code !== 0) {
-            shell.echo('Error: python FaceApi failed')
-            shell.exit(1)
-        }
-    }
-
-    //face detect 실행하기: <make> 페이지 로드 시 자동 실행
-    toFrame()
-    setTimeout(() => faceApi(), 10);
-    
-    console.log("command compelete!");
-    */
 
     return {
       //title value 값 넘겨서 받아주는지 확인하는 테스트
@@ -88,7 +68,7 @@ export class AppController {
       fileFilter: videoFileFilter,
     }),
   )
-  async uploadedFile(@UploadedFile() file: any) {
+  async uploadedFile(@UploadedFile() file: any) { // 
     const response = {
       originalname: file.originalname,
       filename: file.filename,
