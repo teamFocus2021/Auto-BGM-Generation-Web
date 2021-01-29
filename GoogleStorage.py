@@ -38,3 +38,6 @@ print(url)
 # export GOOGLE_APPLICATION_CREDENTIALS="C:\Users\CHOISAYWHY\jsons\dbtest-301709-b8daa273ad42.json" 
 #                                             ㄴ자기가 json 파일 저장한 경로 쓰기 
 # 이후 실행
+# pip install -U httplib2==0.15.0
+
+# https://github.com/googleapis/google-api-python-client/issues/803
