@@ -18,7 +18,7 @@ const SubmitButton = (props: ISubmitButtonProps) => {
 
   return (
     <div className={className} style={style}>
-      <Link href="/views/handle" as="/handle">
+      <Link href="/views/make" as="/make">
         <button className={buttonClassName} style={buttonStyle} onClick={handleSubmit} disabled={disabled || _disabled}>
           {content}
         </button>

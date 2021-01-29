@@ -10,6 +10,8 @@ type IndexProps = {
         emotions: string
     }
 }
+
+
 export default function Make(props: IndexProps) {
     const { emotions } = props.query;
     return (
@@ -17,16 +19,15 @@ export default function Make(props: IndexProps) {
             {/* <div>
                 {emotions}
             </div> */}
-
             <div className="video_player">            
                 <VideoPlayer />
             </div>
             <div className="music_list">            
                 <MusicCategory />
             </div>
-            <div className="frame_list">            
+            {/* <div className="frame_list">            
                 <Frames />
-            </div>
+            </div> */}
         </>
     )
 }

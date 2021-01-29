@@ -10,13 +10,13 @@ client = storage.Client()
 bucket = client.get_bucket('store_video2') # 버켓 이름 넣어줌
 
 
-blob = bucket.blob('upload/original_video/test.mp4') # 파일을 어떤 이름으롤 올릴건지
+blob = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
 
 # filename = "%s/%s" % (folder, filename)
 # blob = bucket.blob(filename)
 
 # Uploading from local file without open()
-blob.upload_from_filename('test.mp4') # 저장할 파일 이름 넣어줌
+blob.upload_from_filename('upload/original_video/test.mp4') # 저장할 파일 이름 넣어줌
 
 
 blob.make_public() # 공개 리소스로 지정

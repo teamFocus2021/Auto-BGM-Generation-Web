@@ -6,15 +6,13 @@ const shell = require('shelljs');
 // 음악 클릭하면 그에 맞게 emotions.json 변경
 const file_name = './upload/original_video/test.mp4';
 const new_name = './upload/new_video/new_video.mp4';
-var music  = {};
 
-//------영상처리 and 감정분석------
-toFrame(file_name);
-setTimeout(() => faceApi(), 10);
-
+// toFrame(file_name);
+// setTimeout(() => faceApi(), 10);
 //--------auto-make video---------
-deleteFile();
+// deleteFile();
 setTimeout(() => makeVideo(), 10);
+
 
 function makeVideo(){
     const data = JSON.parse(fs.readFileSync('upload/emotion/emotions.json', 'utf8'));
@@ -41,14 +39,11 @@ function makeVideo(){
         new_image = keys[i];
         new_emotion = data[new_image];
         time = new_image - current_image; // 1초 간격
+
         music_num = current_emotion.replace(regex, ''); //숫자가 아닌 모든 것을 삭제. smile5 -> 5 추출.
-        if(music_num){
-            current_emotion = current_emotion.replace(music_num, '');
-            cutAudio(current_emotion, time, current_image, music_num);              
-        }
-        else{
-            cutAudio(current_emotion, time, current_image);
-        }
+        current_emotion = current_emotion.replace(music_num, '');
+        cutAudio(current_emotion, time, current_image, music_num); 
+
         current_image = new_image;
         current_emotion = new_emotion;
         time = 0;
@@ -59,28 +54,15 @@ function makeVideo(){
     time = total_time - current_image;
     music_num = current_emotion.replace(regex, '');
 
-    if(music_num){
-        current_emotion = current_emotion.replace(music_num, '');
-        cutAudio(current_emotion, time, current_image, music_num);              
-    }
-    else{
-        cutAudio(current_emotion, time, current_image);
-    }
+    current_emotion = current_emotion.replace(music_num, '');
+    cutAudio(current_emotion, time, current_image, music_num);              
 
-    setTimeout(() => {
-        var json = JSON.stringify(music);
-        fs.appendFile('upload/emotion/music.json', json , 'utf8', function (err) {
-            if (err) throw err;
-          }); 
-    }, 10)
+
 
     //함수 동기 실행
     setTimeout(() => getAudio(file_name), 10);
     setTimeout(() => concatAudio(), 10);
     setTimeout(() => mixAudio(), 10);
-    setTimeout(() => {
-        console.log("-----ready to download!-----");
-    }, 10);
     setTimeout(() => mergeVideo(file_name, new_name), 10); // 버튼 누르면 실행시켜서 저장되게 만들기(option : 다운로드 눌렀을 때 저장할 이름 설정)
     setTimeout(() => {
     console.log("-----download complete!-----");
@@ -97,15 +79,9 @@ function makeVideo(){
 // merge : output.mp3 -> new_video.mp4 추출
 
 // 오디오 자르기
-function cutAudio(emotion, duration, frame_num, music_num=0) {
+function cutAudio(emotion, duration, frame_num, music_num) {
     !fs.existsSync('new') && fs.mkdirSync('new');
-    if(music_num){
-        var id = music_num
-    }
-    else{
-        var id = Math.ceil(Math.random() * 10);
-    }
-    music[frame_num] = emotion+id
+    id = music_num
     if (shell.exec(`ffmpeg -i http://sehwa98.dothome.co.kr/mp3/${emotion}/${emotion}(${id}).mp3 -acodec copy -t ${duration} new/${frame_num}.mp3`).code !== 0) {
         shell.echo('Error: audio cut failed')
         shell.exit(1)
@@ -167,9 +143,6 @@ function mergeVideo(video, new_name) {
     });
     //new directory 삭제
     fs.rmdir("new", () => { 
-    });
-    fs.unlink('music.json', function(err){
-
     });    
     // //emotions.json 삭제
     // fs.unlink('emotions.json', function(err){
@@ -219,29 +192,8 @@ function deleteFile(){
             });
             //new directory 삭제
             fs.rmdir("new", () => { 
-            });
-            fs.unlink('music.json', function(err){
-
             });                 
         }
     })
 }
 
-// 0.5초 간격으로 영상 이미지 처리
-function toFrame(file_name){
-    !fs.existsSync('upload/frames') && fs.mkdirSync('upload/frames');
-    if (shell.exec(`ffmpeg -i ${file_name} -vf fps=1 upload/frames/%04d.jpg`).code !== 0) {
-        shell.echo('Error: cut frame failed')
-        shell.exit(1)
-    }
-}
-
-// 감정추출
-function faceApi(){
-    console.log("---loading---");
-    if (shell.exec('python FaceApi.py').code !== 0) {
-        shell.echo('Error: python FaceApi failed')
-        shell.exit(1)
-    }
-    console.log("---face API complete !---");
-}

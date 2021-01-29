@@ -8,11 +8,11 @@
 
 const shell = require('shelljs');
 const fs = require('fs');
-
+const file_name = './upload/original_video/test.mp4';
 // 0.5초 간격으로 영상 이미지 처리
 function toFrame(file_name){
-    !fs.existsSync('save_img') && fs.mkdirSync('save_img');
-    if (shell.exec(`ffmpeg -i ${file_name} -vf fps=2 save_img/%04d.jpg`).code !== 0) {
+    !fs.existsSync('upload/frames') && fs.mkdirSync('upload/frames');
+    if (shell.exec(`ffmpeg -i ${file_name} -vf fps=1 upload/frames/%04d.jpg`).code !== 0) {
         shell.echo('Error: cut frame failed')
         shell.exit(1)
     }
@@ -29,5 +29,5 @@ function faceApi(){
 }
 
 // example
-toFrame('test.mp4')
+toFrame(file_name)
 setTimeout(() => faceApi(), 10);

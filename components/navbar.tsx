@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Navbar: FC = () => {
   return (
-    <div style={{ display: 'flex', marginTop: "40px", marginBottom: "40px", marginLeft: "20px", marginRight: "20px" }}>
+    <div style={{ display: 'flex', marginTop: "40px", marginBottom: "40px", marginLeft: "20px", marginRight: "70px" }}>
       <div style={{ flexBasis: '80%' }}>
         <Link href="/views/home" as="/">
           <a>

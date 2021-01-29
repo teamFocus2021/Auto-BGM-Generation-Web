@@ -2,9 +2,11 @@ import os
 import requests
 import json
 import time
+import random
+import re
 
-client_id = "JfMpmv64nah1_Xi6b1CE" # private info
-client_secret = "lDeEYya5VI"  # private info
+client_id = "fo5vafekDd_Dr7fd_Lt7" # private info
+client_secret = "7IDiLJY66W"  # private info
 url = "https://openapi.naver.com/v1/vision/face"  # 얼굴 감지
 headers = {'X-Naver-Client-Id': client_id, 'X-Naver-Client-Secret': client_secret}
 
@@ -16,6 +18,8 @@ file_list = os.listdir(path_dir)
 file_list.sort()
 last_file = ''
 end = "{0:04d}".format(file_count) # 마지막 프레임 : 마지막 감정이 3초 이상 유지되었는 지 확인용
+p = re.compile("[^0-9]")
+origin_emotion = ''
 
 # emotions.json
 emotions = dict()
@@ -30,6 +34,7 @@ for i, file_name in enumerate(file_list):
     response = requests.post(url, files=files, headers=headers)
     res_code = response.status_code
     if res_code == 200:
+        id = random.randint(1,10)
         faces = response.json()['faces']
         # faces 의 value 가 있는 경우(얼굴 감지한 경우)
         if response.json()['faces']:
@@ -50,22 +55,25 @@ for i, file_name in enumerate(file_list):
                 elif emotion == 'disgust' or emotion == 'surprise':
                     emotion = 'surprise'
                     count[4] += 1
-                # print(file_name, emotion)
+                # print(file_name, prev_emotion, emotion)
                 if prev_emotion == emotion:
                     break # for face in faces 반복문을 나가기
                 if i > 0:  # prev_file 이 존재할 때부터 처리
                     time = int(file_name) - int(prev_file)
-                    # if time < 3: # 0.5초 간격이므로 3초이상 표정이 지속되지 않은 경우 저장x
-                    if time < 3: # 1초 간격  
+                    if time < 3: # 1초 간격. 3초이상 표정이 지속되지 않은 경우 저장x
                         emotions.pop(prev_file, 404)
-                        if not prev_emotion == emotion:
-                            emotions[file_name] = emotion
+                        emotions[file_name] = emotion+str(id)
+                        # 순간 감정이 나왔어 그동안의 감정이 지속된 시간을 계산해. 순간 감정이 얼마나 지속되는지 알려면 prev=curr 필요.
                         prev_file = file_name
                         prev_emotion = emotion
                         break
-                emotions[file_name] = emotion
+                    else:
+                        if origin_emotion == prev_emotion:
+                            emotions.pop(prev_file, 404)
+                        origin_emotion = prev_emotion
                 prev_file = file_name
-                prev_emotion = face['emotion']['value']
+                prev_emotion = emotion                
+                emotions[file_name] = emotion+str(id)
                 
         else:
             # 감지한 얼굴이 없는 경우 -> "faces":[] -> 삭제
@@ -79,7 +87,6 @@ for i, file_name in enumerate(file_list):
 
 # 마지막 감정에 대한 처리
 last_file = prev_file
-# if int(end) - int(last_file) < 6:
 if int(end) - int(last_file) < 3:
     print("last file delete !")
     emotions.pop(last_file, 404)
@@ -126,10 +133,3 @@ with open('./upload/emotion/emotions.json', 'w', encoding='utf-8') as make_file:
 # print("************emotions.json************")
 # print(json.dumps(json_data, indent="\t"))
 
-
-# 얼굴이 없는 경우 : {"info":{"size":{"width":404,"height":720},"faceCount":0},"faces":[]}
-# 얼굴이 있는 경우 : {"info":{"size":{"width":354,"height":472},"faceCount":1},
-# "faces":[{"roi":{"x":110,"y":124,"width":149,"height":149},"landmark":{"leftEye":{"x":145,"y":167},
-# "rightEye":{"x":216,"y":165},"nose":{"x":178,"y":199},"leftMouth":{"x":153,"y":231},"rightMouth":{"x":210,"y":232}},
-# "gender":{"value":"male","confidence":1.0},"age":{"value":"19~23","confidence":0.494793},"emotion":{"value":"neutral",
-# "confidence":1.0},"pose":{"value":"frontal_face","confidence":0.999343}}]}
