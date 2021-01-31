@@ -2,7 +2,6 @@ import { Controller, Get, Post, Query, Render, UseInterceptors, UploadedFile, Re
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { editFileName, videoFileFilter } from './utils/file-upload.utils';
-import emotion from "../upload/emotion/emotions.json";
 
 @Controller()
 export class AppController {
@@ -57,7 +56,6 @@ export class AppController {
 
     const fs = require('fs');
 
-    const emotion_length = Object.keys(emotion).length - 2;
     // const emotion_string = JSON.stringify(emotion);
 
     const data = JSON.parse(fs.readFileSync('upload/emotion/emotions.json', 'utf8'));
