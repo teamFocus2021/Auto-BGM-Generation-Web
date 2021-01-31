@@ -32,3 +32,12 @@
  .player {
      background-color: hsla(268, 100%, 92%, 0.5);
  }
+
+ .download{
+    background-color: blueviolet;
+    display: inline-block;
+    color: #FFF;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+ }

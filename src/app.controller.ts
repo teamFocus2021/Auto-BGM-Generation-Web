@@ -33,10 +33,17 @@ export class AppController {
   public connect() {
   }
 
+  @Get('/download')
+  public download(){
+    const shell = require('shelljs');
+    shell.exec('node NewVideo.js');
+  }
+  
   //video processing main page: 비디오 processing 메인 페이지
   @Get('/make')
   @Render('make')
   public make() {
+    
 
 //serverside에서 Nest.js 차원에서 command 명령어 실행하여
 //python 파일 실행하기 shelljs 생성 -> exec로 실행하기 
