@@ -7,9 +7,10 @@ import '../components/about.css'
 import '../components/button.css'
 import '../components/editor.css'
 
+
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <div>
+    <div className="total_div">
       <Navbar />
         <div>
           <Component {...pageProps} />

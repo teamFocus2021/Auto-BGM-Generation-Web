@@ -6,7 +6,7 @@
     padding-right: 80px;
     padding-top: 10px;
     padding-bottom:10px;
-    font-size: 18px;
+    font-size: 30px;
     color: white;
     border-color: transparent;
     background-color: #E9A451;
@@ -19,9 +19,10 @@
     text-decoration: none;
     flex-basis: 5%;
     margin-left: 1rem;
-    margin-top: 10px;
+    margin-top: 20px;
     color: white;
     vertical-align: middle;
+    font-size: 25px;
 }
 
  .logo {

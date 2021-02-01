@@ -15,10 +15,43 @@ html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    font-family: 'Jost-VariableFont_wght';
+}
+
+.total_div {
+    width: 100%;
+    height: 100%;
+    margin: 10%;
 }
 
 .main_div {
+    margin-top: 5%;
+    width: 35%;
+    height: 30%;
+    float: left;
+}
+
+.image_div {
     margin-top: 10rem;
-    margin-left: 60px;
-    margin-right: 60px;
+    width: 40%;
+    height: 30%;
+    float: left;
+}
+
+.aline {
+    width: 100%;
+    margin: 10px auto;
+}
+
+@font-face {
+    font-family: 'BebasNeue-Regular';
+    src: url(C:\Users\ire45\Desktop\original-react-nest\Auto-BGM-Generation-Web\src\font\BebasNeue-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Jost-Italic-VariableFont_wght';
+    src: url(C:\Users\ire45\Desktop\original-react-nest\Auto-BGM-Generation-Web\src\font\Jost-Italic-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Jost-VariableFont_wght';
+    src: url(C:\Users\ire45\Desktop\original-react-nest\Auto-BGM-Generation-Web\src\font\Jost-VariableFont_wght.ttf) format('truetype');
 }
