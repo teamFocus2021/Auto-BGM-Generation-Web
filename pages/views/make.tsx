@@ -30,9 +30,9 @@ export default function Make(props: IndexProps) {
             <div className="download">
                 <Download />
             </div>
-            {/* <div className="frame_list">            
+            <div className="frame_list">            
                 <Frames />
-            </div> */}
+            </div>
         </>
     )
 }

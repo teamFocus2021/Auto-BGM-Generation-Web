@@ -42,9 +42,6 @@ for key in json_data.keys():
     print("frame URL : " + frame_url)
 
 
-
-
-
 # 해야할 것
 
 # 구글 클라우드 프로젝트 생성
