@@ -38,6 +38,13 @@ export class AppController {
     shell.exec('node NewVideo.js');
   }
   
+  @Get('/video')
+  public video(){
+    console.log("serverside");
+    const shell = require('shelljs');
+    shell.exec('python GoogleStorage.py') ;
+    shell.exec('node PythonToJs.js') ;
+  }
   //video processing main page: 비디오 processing 메인 페이지
   @Get('/make')
   @Render('make')
@@ -47,10 +54,10 @@ export class AppController {
 //serverside에서 Nest.js 차원에서 command 명령어 실행하여
 //python 파일 실행하기 shelljs 생성 -> exec로 실행하기 
     
-    console.log("serverside");
-    const shell = require('shelljs');
-    shell.exec('python GoogleStorage.py') ;
-    shell.exec('node PythonToJs.js') ;
+    // console.log("serverside");
+    // const shell = require('shelljs');
+    // shell.exec('python GoogleStorage.py') ;
+    // shell.exec('node PythonToJs.js') ;
 
     // 잘린 프레임 넘기기
 
@@ -76,9 +83,8 @@ export class AppController {
 
 
 
-
-  @Post('/handle')
-  @Render('handle')
+  // @Render('handle')
+  @Post('/make')
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({
@@ -95,10 +101,10 @@ export class AppController {
     };
     return response;
   }
-  @Get(':filepath')
-  @Render('handle')
-  seeUploadedFile(@Param('filepath') file: any, @Res() res: any) {
-    return res.sendFile(file, { root: './upload/original_video' });
-  }
+  // @Get(':filepath')
+  // @Render('handle')
+  // seeUploadedFile(@Param('filepath') file: any, @Res() res: any) {
+  //   return res.sendFile(file, { root: './upload/original_video' });
+  // }
 }
 

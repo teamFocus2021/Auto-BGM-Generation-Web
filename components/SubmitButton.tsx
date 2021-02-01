@@ -23,7 +23,7 @@ const SubmitButton = (props: ISubmitButtonProps) => {
   useEffect(() => {
     // GET request using axios inside useEffect React hook
     return () => {
-      axios.get('http://localhost:3000/make').then((response) => {
+      axios.get('http://localhost:3000/video').then((response) => {
         console.log(response);
       });
     }

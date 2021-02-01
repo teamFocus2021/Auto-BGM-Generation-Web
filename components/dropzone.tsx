@@ -6,7 +6,7 @@ import SubmitButton from './SubmitButton'
 const DropzoneUploader: FC = () => {
 
     const getUploadParams: IDropzoneProps['getUploadParams'] = ({ meta }) => { 
-        const url = '/handle'
+        const url = '/make'
         const fileUrl = `${url}/${encodeURIComponent(meta.name)}`
         return { url, meta: { fileUrl } } 
     }
