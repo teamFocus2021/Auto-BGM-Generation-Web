@@ -1,5 +1,6 @@
 from gcloud import storage
 import os
+import json
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="./dbtest-301709-b8daa273ad42.json"
 
@@ -9,20 +10,39 @@ client = storage.Client()
 
 bucket = client.get_bucket('store_video2') # 버켓 이름 넣어줌
 
+# 동영상 파일 올리기
 
-blob = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
+video = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
 
-# filename = "%s/%s" % (folder, filename)
-# blob = bucket.blob(filename)
 
 # Uploading from local file without open()
-blob.upload_from_filename('upload/original_video/test.mp4') # 저장할 파일 이름 넣어줌
+video.upload_from_filename('upload/original_video/test.mp4') # 저장할 파일 이름 넣어줌
 
 
-blob.make_public() # 공개 리소스로 지정
-url = blob.public_url # 올라간 url
+video.make_public() # 공개 리소스로 지정
+url = video.public_url # 올라간 url
 
-print(url)
+print("동영상 URL : " + url)
+
+
+# 프레임 파일 올리기
+
+with open('upload/emotion/emotions.json') as json_file:
+    json_data = json.load(json_file)
+
+for key in json_data.keys():
+    if( key == 'total' or key == 'time'):
+        continue 
+    print(key)
+    frame_path = "upload/frames/"+ key +".jpg"
+    frame = bucket.blob(key+".jpg") # 파일을 어떤 이름으롤 올릴건지
+    frame.upload_from_filename(frame_path)
+    frame.make_public()
+    frame_url = frame.public_url
+    print("frame URL : " + frame_url)
+
+
+
 
 
 # 해야할 것
