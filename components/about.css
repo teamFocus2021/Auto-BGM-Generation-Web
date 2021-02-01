@@ -10,9 +10,11 @@
 
 html {
     background-image: url("./assets/background.png");
-    background-size: 100% 768px;
-    background-repeat: no-repeat;
-    min-width: 800px;
+    background-size: cover;
+    background-repeat: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 .main_div {
