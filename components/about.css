@@ -45,13 +45,13 @@ html {
 
 @font-face {
     font-family: 'BebasNeue-Regular';
-    src: url(C:\Users\ire45\Desktop\original-react-nest\Auto-BGM-Generation-Web\src\font\BebasNeue-Regular.ttf) format('truetype');
+    src: url(../src/font/BebasNeue-Regular.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Jost-Italic-VariableFont_wght';
-    src: url(C:\Users\ire45\Desktop\original-react-nest\Auto-BGM-Generation-Web\src\font\Jost-Italic-VariableFont_wght.ttf) format('truetype');
+    src: url(../src/font/Jost-Italic-VariableFont_wght.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Jost-VariableFont_wght';
-    src: url(C:\Users\ire45\Desktop\original-react-nest\Auto-BGM-Generation-Web\src\font\Jost-VariableFont_wght.ttf) format('truetype');
+    src: url(../src/font/Jost-VariableFont_wght.ttf) format('truetype');
 }
