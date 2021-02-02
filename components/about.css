@@ -17,20 +17,19 @@ html {
     -o-background-size: cover;
     font-family: 'Jost-VariableFont_wght';
 }
+div {
+    background-color: transparent !important;
+}
 
 .total_div {
-    width: 100%;
+    width: 90%;
     height: 100%;
     margin: 10%;
 }
 
 .main_div {
-    margin-top: 5%;
-    width: 35%;
-    height: 30%;
-    float: left;
 }
-
+`
 .image_div {
     margin-top: 10rem;
     width: 40%;
