@@ -1,12 +1,30 @@
-import { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import frame from '../upload/emotion/emotions.json';
 
-const MusicCategory: FC = () => {
+interface Props {
+    time: string;
+    onTime: (time:string) => void;
+}
+
+//select 눌렀을 때 json파일 변경
+const MusicCategory: FC<Props> = (props) => {
+    const [index, setIndex] = useState(0); // 현재 어떤 탭을 클릭했는지 알 수 있음 index:0 -> smile, index:1 -> neutral  ---
+    // var time = "0010";
+    // const editMusic = () => {
+    //         frame[props.time] = 'neutral5'   // 이거만하면 되는데 안먹음 ㅠㅠ  근데 더 충격. 이런식으로 바꿔도 실제 json파일이 바뀌는 게 아니라 
+                                                // import한 컴포넌트 안에서만 바뀜 
+    // }
+    
+    // console.log(props.time)
+    // console.log(frame['0001'])
+
     return (
-            <Tabs style={{marginRight: "70px" }}>
+
+            <Tabs selectedIndex={index} onSelect={index => setIndex(index)} style={{marginRight: "70px" }}>
                 <TabList>
                     <Tab>Smile / Laugh</Tab>
                     <Tab>Neutral / Talking</Tab>
@@ -15,15 +33,18 @@ const MusicCategory: FC = () => {
                     <Tab>Surprise / Disgust</Tab>
                 </TabList>
                 <TabPanel>
+                    <div>
+                        <p>music : {props.time}</p>
+                        <br/>                                    
+                        <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(1).mp3" customAdditionalControls={[]} footer={<button className="select">select</button>}/>
+                    </div>
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(1).mp3" customAdditionalControls={[]} footer="Smile(1)"/>
-                    <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(2).mp3" customAdditionalControls={[]} footer="Smile(2)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(3).mp3" customAdditionalControls={[]} footer="Smile(3)"/> */}
-                    {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(4).mp3" customAdditionalControls={[]} footer="Smile(4)"/> */}
-                    {/* <br/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(3).mp3" customAdditionalControls={[]} footer="Smile(3)"/>
+                    <br/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(4).mp3" customAdditionalControls={[]} footer="Smile(4)"/>
+                    <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(5).mp3" customAdditionalControls={[]} footer="Smile(5)"/>
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile(6).mp3" customAdditionalControls={[]} footer="Smile(6)"/>
@@ -132,5 +153,6 @@ const MusicCategory: FC = () => {
             </Tabs>
     )
 }
+
 
 export default MusicCategory;

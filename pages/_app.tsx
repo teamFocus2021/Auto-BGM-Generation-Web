@@ -6,6 +6,7 @@ import '../components/dropzone.css'
 import '../components/about.css'
 import '../components/button.css'
 import '../components/editor.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {

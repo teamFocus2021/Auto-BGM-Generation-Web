@@ -34,11 +34,21 @@
      background-color: hsla(268, 100%, 92%, 0.5);
  }
 
- .download{
-    background-color: blueviolet;
-    display: inline-block;
-    color: #FFF;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer;
+ .download_button{
+    color: white;
+    background-color: #E9A451;
+    border-color: transparent;
+    /* border-radius: 10rem; */
+    font-size: 20px; 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
  }
+
+ .select {
+    color: white;
+    background-color: #E9A451;
+    border-color: transparent;
+    border-radius: 10rem;    
+ }
+
+ 

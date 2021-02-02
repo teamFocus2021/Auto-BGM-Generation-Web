@@ -1,3 +1,4 @@
+// ffmpeg을 이용해 오디오 및 비디오 처리
 // 영상업로드하면 자동으로 음악 입혀져 나오는 기능
 const fs = require('fs');
 const shell = require('shelljs');

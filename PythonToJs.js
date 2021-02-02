@@ -1,5 +1,4 @@
-#!/usr/bin/env node 
-//./PythonTest.js 로 실행가능하게 만듬 / 안쓰면 node PythonTest.js
+//영상처리 and 감정분석
 
 // python -m pip install opencv-python (in vscode)
 // python extension pack 다운로드 (in vscode)

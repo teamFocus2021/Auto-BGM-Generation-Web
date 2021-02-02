@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { FC, useEffect, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 // component 가 mount 될 때 download : 0 으로 초기화
 const Download: FC = () => {
@@ -24,7 +25,8 @@ const Download: FC = () => {
     }, [download]);
 
     return (
-        <button className="download" onClick={onDownload}>download</button>
+        // <Button variant="primary" className="download_button" onClick={onDownload}>download</Button>
+        <button className="download_button" onClick={onDownload}>download</button>
     )
 }
 

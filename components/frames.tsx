@@ -2,18 +2,23 @@ import { FC } from 'react';
 import * as React from 'react';
 import frame from '../upload/emotion/emotions.json';
 
-const Frames: FC = () => {
+interface Props {
+    onTime: (key:string) => void;
+}
 
-    var frame_url ='';
-    for (const key of Object.keys(frame)){
-        if( key == 'total' || key == 'time')
-            continue;
-    
-        frame_url += "<img src= \'https://storage.googleapis.com/store_video2/"+ key + ".jpg\' alt=\'logo\' />";
-        console.log(frame_url);
+const Frames: FC<Props> = (props) => {
+
+    const sendTime = (key: string) => {    
+        props.onTime(key);
     }
+    
+    //버튼과 이미지 mapping
+    var lists = Object.keys(frame).filter(key=> key != 'total' && key != 'time').map(key => <img src={`https://storage.googleapis.com/store_video2/${key}.jpg`} onClick={()=>sendTime(key)}/>)
+    
     return (
-        <div dangerouslySetInnerHTML={ {__html: frame_url} }></div>
+        <div style={{cursor: 'pointer', display:'inline-block' }}>
+            {lists}
+        </div>          
     )
 }
 

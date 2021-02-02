@@ -121,9 +121,26 @@ if total == 3:
 if total == 4:
     news['total'] = 'surprise'
 
-jsonDir = './upload/emotion'
-if not os.path.isdir(jsonDir):
-    os.mkdir(jsonDir)
+
+pathDir = './upload'
+if not os.path.isdir(pathDir):
+    os.mkdir(pathDir)
+
+pathDir = './upload/emotion'
+if not os.path.isdir(pathDir):
+    os.mkdir(pathDir)
+
+pathDir = './upload/frames'
+if not os.path.isdir(pathDir):
+    os.mkdir(pathDir)
+
+pathDir = './upload/new_video'
+if not os.path.isdir(pathDir):
+    os.mkdir(pathDir)
+
+pathDir = './upload/original_video'
+if not os.path.isdir(pathDir):
+    os.mkdir(pathDir)
     
 # json 파일로 저장
 with open('./upload/emotion/emotions.json', 'w', encoding='utf-8') as make_file:
