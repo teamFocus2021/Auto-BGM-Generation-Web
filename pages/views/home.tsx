@@ -1,28 +1,33 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home: FC = ({}) => {
 
   return (
-    <div>
+      <div className="container" style={{marginTop:"8rem"}}>
 
-    <div className="main_div">
-      <h4 style={{fontSize: '60px', lineHeight:'7px'}}>Edit your video<p></p>Quickly & Easily </h4>
-      <h4 style={{fontSize: '20px', lineHeight:'7px'}}>You can edit your YouTube upload video easily and quickly.
-      <p></p>Find the right background music for your video! <p></p> you just put your video.</h4>
+        <div className="row">
+          <div className="col-xl" style={{}}>
+              <h4 style={{fontSize: '60px', lineHeight: '2.5rem'}}>Edit your video</h4>
+              <h4 style={{fontSize: '60px', }}>Quickly & Easily</h4>
 
-      <div style={{marginTop:'80px'}}>
-      <Link href="/views/start" as="/start">
-        <a className="start_button">TRY YOUR VIDEO</a>
-      </Link>
+              <h4 style={{fontSize: '20px', marginTop: '2rem'}}>You can edit your YouTube upload video easily and quickly.</h4>
+              <h4 style={{fontSize: '20px'}}>Find the right background music for your video! you just put your video.</h4>
+
+              <div style={{marginTop:'4.5rem'}}>
+                <Link href="/views/start" as="/start">
+                  <a className="start_button">TRY YOUR VIDEO</a>
+                </Link>
+              </div>
+          </div>
+
+          <div className="col-xl">
+            <img style={{ width: "600px", height: "500px"}} src='http://sarac33.dothome.co.kr/image.png' />
+          </div>
+        </div>
+    
       </div>
-    </div>
-
-    <div className="image_div">
-      <img style={{ width: "800px", height: "650px", marginTop: '-20%'}} src='http://sarac33.dothome.co.kr/image.png' />
-    </div>
-
-    </div>
   );
 };
 

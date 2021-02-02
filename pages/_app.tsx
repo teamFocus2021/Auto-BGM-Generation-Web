@@ -10,7 +10,7 @@ import '../components/editor.css'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <div className="total_div">
+    <div>
       <Navbar />
         <div>
           <Component {...pageProps} />

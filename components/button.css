@@ -15,20 +15,20 @@
     
 }
 
+.logo {
+    width: 20rem;
+    height: 5rem;
+}
+
 .nav_button {
     text-decoration: none;
     flex-basis: 5%;
     margin-left: 1rem;
     margin-top: 20px;
-    color: white;
+    color: black;
     vertical-align: middle;
     font-size: 25px;
 }
-
- .logo {
-     height: 50px;
-     width: 200px;
- }
 
  .player {
      background-color: hsla(268, 100%, 92%, 0.5);
