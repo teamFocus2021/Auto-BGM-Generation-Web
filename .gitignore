@@ -2,5 +2,8 @@
 .yalc
 node_modules
 
+new
+mylist.txt
+
 # google cloud 계정 접근 키
 dbtest-301709-b8daa273ad42.json

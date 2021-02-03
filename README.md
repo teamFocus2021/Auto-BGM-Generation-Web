@@ -5,7 +5,7 @@
 - pip install
 
     ```
-    $ pip install ffmpeg opencv-python requests
+    $ pip install ffmpeg opencv-python requests gcloud --upgrade google-cloud-storage httplib2
     ```
 
 - npm install
@@ -25,7 +25,7 @@
 - If you had an error, try this!
 
     ```
-    npm install nodemon react-dropzone-uploader shelljs ffmpeg gcloud --upgrade google-cloud-storage bootstrap
+    npm install react-dropzone-uploader shelljs ffmpeg bootstrap
     ```
 
 ---
