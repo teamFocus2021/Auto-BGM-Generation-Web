@@ -3,6 +3,23 @@
     font-size: 20px;
     white-space: nowrap;
     margin-top: -3rem;
+    font-family: "TitilliumWeb-Regular";
+    color: #232437;
+}
+
+.about_text1 {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'TitilliumWeb-Regular';
+    color: #232437;
+}
+
+.about_text2 {
+    margin-top: -1rem;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Archivo-SemiBold';
+    color: #424567;
 }
 
 .no_split {
@@ -18,7 +35,6 @@ html, body {
     background-position: 50% 50%;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Jost-VariableFont_wght';
 }
 
 .align {
@@ -52,4 +68,45 @@ html, body {
 @font-face {
     font-family: 'Jost-VariableFont_wght';
     src: url(../src/font/Jost-VariableFont_wght.ttf) format('truetype');
+}
+
+/*new fonts*/
+@font-face {
+    font-family: 'Archivo-Medium';
+    src: url(../src/font/Archivo-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Archivo-MediumItalic';
+    src: url(../src/font/Archivo-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Archivo-Regular';
+    src: url(../src/font/Archivo-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Archivo-SemiBold';
+    src: url(../src/font/Archivo-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'RussoOne-Regular';
+    src: url(../src/font/RussoOne-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ArchivoBlack-Regular';
+    src: url(../src/font/ArchivoBlack-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-Light';
+    src: url(../src/font/TitilliumWeb-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url(../src/font/TitilliumWeb-Regular.ttf) format('truetype');
 }
