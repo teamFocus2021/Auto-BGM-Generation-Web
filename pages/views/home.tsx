@@ -8,10 +8,10 @@ const Home: FC = ({}) => {
 
   return (
       <Container fluid>
-      <div style={{marginTop:"8rem"}}>
+      <div>
 
         <Row>
-          <Col>
+          <Col style={{marginLeft: '7rem'}}>
               <h4 style={{fontSize: '60px', lineHeight: '2.5rem'}}>Edit your video</h4>
               <h4 style={{fontSize: '60px', }}>Quickly & Easily</h4>
 
@@ -26,7 +26,7 @@ const Home: FC = ({}) => {
           </Col>
 
           <Col>
-            <img style={{ width: "600px", height: "410px"}} src='http://sarac33.dothome.co.kr/image.png' />
+            <img style={{ width: "700px", height: "500px", marginTop:"-5rem"}} src='http://sarac33.dothome.co.kr/image.png' />
           </Col>
         </Row>
     
