@@ -2,19 +2,24 @@
 ## base image for Step 1: Node 10
 FROM node:10 AS builder
 WORKDIR /app
-## 프로젝트의 모든 파일을 WORKDIR(/app)로 복사한다
+## Copy all files to WORKDIR(/app)
 COPY . .
-## Nest.js project를 build 한다
+## Build Nest.js project
 RUN npm install
 RUN npm run build
 
 
 # Step 2
-## base image for Step 2: Node 10-alpine(light weight)
-FROM node:10-alpine
+## base image for Step 2: ubuntu
+FROM ubuntu:20.04
 WORKDIR /app
-## Step 1의 builder에서 build된 프로젝트를 가져온다
+## Set up Ubuntu
+RUN apt-get update && apt-get upgrade
+RUN apt-get install python3-pip ffmpeg
+RUN pip3 install ffmpeg opencv-python requests
+
+## Copy the project built in builder
 COPY --from=builder /app ./
-## application 실행
+## Start application
 CMD ["npm", "run", "start"]
 EXPOSE 3000
