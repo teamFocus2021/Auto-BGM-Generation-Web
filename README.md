@@ -1,15 +1,55 @@
-# NEST-NEXT BEAN
+# Auto BGM Generation WEB
 
-```
-pip install ffmpeg opencv-python requests
+## 1. Settings
 
-npm install nodemon react-dropzone-uploader shelljs ffmpeg gcloud --upgrade google-cloud-storage bootstrap
-```
+- pip install
 
-ffmpeg-4.3.1-full_build.zip 다운로드 후 환경변수 설정
+    ```
+    $ pip install ffmpeg opencv-python requests
+    ```
 
-Google Cloud 사용자 계정 json 키 추가
+- npm install
+    ```
+    $ npm install
+    ```
 
-```
-npm run dev
-```
+- Download
+
+    ```
+    $ sudo apt install ffmpeg
+    > set up PATH
+    ```
+
+- Add Google Cloud user account json key
+
+- If you had an error, try this!
+
+    ```
+    npm install nodemon react-dropzone-uploader shelljs ffmpeg gcloud --upgrade google-cloud-storage bootstrap
+    ```
+
+---
+
+## 2. Run in developer mode
+
+- Watch mode
+
+    ```
+    $ npm run dev
+    ```
+
+---
+
+## 3. Dockerize
+
+- docker build
+
+    ```
+    $ sudo docker build -t bgm-gen-web .
+    ```
+
+- docker run
+
+    ```
+    $ sudo docker run -it -d -p 3000:3000 --name app bgm-gen-web
+    ```

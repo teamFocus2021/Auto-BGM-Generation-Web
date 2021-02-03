@@ -16,5 +16,5 @@ WORKDIR /app
 ## Step 1의 builder에서 build된 프로젝트를 가져온다
 COPY --from=builder /app ./
 ## application 실행
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
 EXPOSE 3000
