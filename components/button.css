@@ -7,7 +7,7 @@
     padding-top: 10px;
     padding-bottom:10px;
     font-size: 30px;
-    color: white;
+    color: white !important;
     border-color: transparent;
     background-color: #E9A451;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -25,7 +25,7 @@
     flex-basis: 5%;
     margin-left: 1rem;
     margin-top: 20px;
-    color: black;
+    color: black !important;
     vertical-align: middle;
     font-size: 25px;
 }
@@ -35,7 +35,7 @@
  }
 
  .download_button{
-    color: white;
+    color: white !important;
     background-color: #E9A451;
     border-color: transparent;
     /* border-radius: 10rem; */
@@ -45,7 +45,7 @@
  }
 
  .select {
-    color: white;
+    color: white !important;
     background-color: #E9A451;
     border-color: transparent;
     border-radius: 10rem;    

@@ -7,6 +7,12 @@
     height: 15rem;
 }
 
+.dzu-div {
+    margin-top: 8rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
 .dzu-inputLabel {
     color: white;
 }

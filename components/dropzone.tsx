@@ -23,6 +23,7 @@ const DropzoneUploader: FC = () => {
 
     return (
         <React.Fragment>
+        <div className="dzu-div">
         <Dropzone
             getUploadParams={getUploadParams}
             onChangeStatus={handleChangeStatus}
@@ -39,6 +40,7 @@ const DropzoneUploader: FC = () => {
                 inputLabel: (files, extra) => (extra.reject ? { color: 'red' } : {}),
             }}
         />
+        </div>
       </React.Fragment>
     )
 };
