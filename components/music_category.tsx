@@ -36,118 +36,118 @@ const MusicCategory: FC<Props> = (props) => {
                     <div>
                         <p>music : {props.time}</p>
                         <br/>                                    
-                        <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile1.mp3" customAdditionalControls={[]} footer={<button className="select">select</button>}/>
+                        <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile1.mp3" customAdditionalControls={[]} footer={<button className="select">select</button>}/>
                     </div>
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile2.mp3" customAdditionalControls={[]} footer="Smile(2)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile2.mp3" customAdditionalControls={[]} footer="Smile(2)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile3.mp3" customAdditionalControls={[]} footer="Smile(3)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile3.mp3" customAdditionalControls={[]} footer="Smile(3)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile4.mp3" customAdditionalControls={[]} footer="Smile(4)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile4.mp3" customAdditionalControls={[]} footer="Smile(4)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile5.mp3" customAdditionalControls={[]} footer="Smile(5)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile5.mp3" customAdditionalControls={[]} footer="Smile(5)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile6.mp3" customAdditionalControls={[]} footer="Smile(6)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile6.mp3" customAdditionalControls={[]} footer="Smile(6)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile7.mp3" customAdditionalControls={[]} footer="Smile(7)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile7.mp3" customAdditionalControls={[]} footer="Smile(7)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile8.mp3" customAdditionalControls={[]} footer="Smile(8)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile8.mp3" customAdditionalControls={[]} footer="Smile(8)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile9.mp3" customAdditionalControls={[]} footer="Smile(9)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile9.mp3" customAdditionalControls={[]} footer="Smile(9)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile/smile10.mp3" customAdditionalControls={[]} footer="Smile(10)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile10.mp3" customAdditionalControls={[]} footer="Smile(10)"/>
                     <br/> */}
                 </TabPanel>
                 <TabPanel>
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral1.mp3" customAdditionalControls={[]} footer="Neutral(1)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral1.mp3" customAdditionalControls={[]} footer="Neutral(1)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral2.mp3" customAdditionalControls={[]} footer="Neutral(2)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral2.mp3" customAdditionalControls={[]} footer="Neutral(2)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral3.mp3" customAdditionalControls={[]} footer="Neutral(3)"/> */}
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral3.mp3" customAdditionalControls={[]} footer="Neutral(3)"/> */}
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral4.mp3" customAdditionalControls={[]} footer="Neutral(4)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral4.mp3" customAdditionalControls={[]} footer="Neutral(4)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral5.mp3" customAdditionalControls={[]} footer="Neutral(5)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral5.mp3" customAdditionalControls={[]} footer="Neutral(5)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral6.mp3" customAdditionalControls={[]} footer="Neutral(6)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral6.mp3" customAdditionalControls={[]} footer="Neutral(6)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral7.mp3" customAdditionalControls={[]} footer="Neutral(7)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral7.mp3" customAdditionalControls={[]} footer="Neutral(7)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral8.mp3" customAdditionalControls={[]} footer="Neutral(8)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral8.mp3" customAdditionalControls={[]} footer="Neutral(8)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral9.mp3" customAdditionalControls={[]} footer="Neutral(9)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral9.mp3" customAdditionalControls={[]} footer="Neutral(9)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral/neutral10.mp3" customAdditionalControls={[]} footer="Neutral(10)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral10.mp3" customAdditionalControls={[]} footer="Neutral(10)"/>
                     <br/> */}
                 </TabPanel>
                 <TabPanel>
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad1.mp3" customAdditionalControls={[]} footer="Sad(1)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad1.mp3" customAdditionalControls={[]} footer="Sad(1)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad2.mp3" customAdditionalControls={[]} footer="Sad(2)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad2.mp3" customAdditionalControls={[]} footer="Sad(2)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad3.mp3" customAdditionalControls={[]} footer="Sad(3)"/> */}
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad3.mp3" customAdditionalControls={[]} footer="Sad(3)"/> */}
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad4.mp3" customAdditionalControls={[]} footer="Sad(4)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad4.mp3" customAdditionalControls={[]} footer="Sad(4)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad5.mp3" customAdditionalControls={[]} footer="Sad(5)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad5.mp3" customAdditionalControls={[]} footer="Sad(5)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad6.mp3" customAdditionalControls={[]} footer="Sad(6)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad6.mp3" customAdditionalControls={[]} footer="Sad(6)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad7.mp3" customAdditionalControls={[]} footer="Sad(7)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad7.mp3" customAdditionalControls={[]} footer="Sad(7)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad8.mp3" customAdditionalControls={[]} footer="Sad(8)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad8.mp3" customAdditionalControls={[]} footer="Sad(8)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad9.mp3" customAdditionalControls={[]} footer="Sad(9)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad9.mp3" customAdditionalControls={[]} footer="Sad(9)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad/sad10.mp3" customAdditionalControls={[]} footer="Sad(10)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/sad10.mp3" customAdditionalControls={[]} footer="Sad(10)"/>
                     <br/> */}
                 </TabPanel>
                 <TabPanel>
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear1.mp3" customAdditionalControls={[]} footer="Fear(1)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear1.mp3" customAdditionalControls={[]} footer="Fear(1)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear2.mp3" customAdditionalControls={[]} footer="Fear(2)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear2.mp3" customAdditionalControls={[]} footer="Fear(2)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear3.mp3" customAdditionalControls={[]} footer="Fear(3)"/> */}
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear3.mp3" customAdditionalControls={[]} footer="Fear(3)"/> */}
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear4.mp3" customAdditionalControls={[]} footer="Fear(4)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear4.mp3" customAdditionalControls={[]} footer="Fear(4)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear5.mp3" customAdditionalControls={[]} footer="Fear(5)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear5.mp3" customAdditionalControls={[]} footer="Fear(5)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear6.mp3" customAdditionalControls={[]} footer="Fear(6)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear6.mp3" customAdditionalControls={[]} footer="Fear(6)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear7.mp3" customAdditionalControls={[]} footer="Fear(7)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear7.mp3" customAdditionalControls={[]} footer="Fear(7)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear8.mp3" customAdditionalControls={[]} footer="Fear(8)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear8.mp3" customAdditionalControls={[]} footer="Fear(8)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear9.mp3" customAdditionalControls={[]} footer="Fear(9)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear9.mp3" customAdditionalControls={[]} footer="Fear(9)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear/fear10.mp3" customAdditionalControls={[]} footer="Fear(10)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/fear10.mp3" customAdditionalControls={[]} footer="Fear(10)"/>
                     <br/> */}
                 </TabPanel>
                 <TabPanel>
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise1.mp3" customAdditionalControls={[]} footer="Surprise(1)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise1.mp3" customAdditionalControls={[]} footer="Surprise(1)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise2.mp3" customAdditionalControls={[]} footer="Surprise(2)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise2.mp3" customAdditionalControls={[]} footer="Surprise(2)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise3.mp3" customAdditionalControls={[]} footer="Surprise(3)"/> */}
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise3.mp3" customAdditionalControls={[]} footer="Surprise(3)"/> */}
                     {/* <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise4.mp3" customAdditionalControls={[]} footer="Surprise(4)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise4.mp3" customAdditionalControls={[]} footer="Surprise(4)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise5.mp3" customAdditionalControls={[]} footer="Surprise(5)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise5.mp3" customAdditionalControls={[]} footer="Surprise(5)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise6.mp3" customAdditionalControls={[]} footer="Surprise(6)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise6.mp3" customAdditionalControls={[]} footer="Surprise(6)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise7.mp3" customAdditionalControls={[]} footer="Surprise(7)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise7.mp3" customAdditionalControls={[]} footer="Surprise(7)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise8.mp3" customAdditionalControls={[]} footer="Surprise(8)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise8.mp3" customAdditionalControls={[]} footer="Surprise(8)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise9.mp3" customAdditionalControls={[]} footer="Surprise(9)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise9.mp3" customAdditionalControls={[]} footer="Surprise(9)"/>
                     <br/>
-                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise/surprise10.mp3" customAdditionalControls={[]} footer="Surprise(10)"/>
+                    <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise10.mp3" customAdditionalControls={[]} footer="Surprise(10)"/>
                     <br/> */}
                 </TabPanel>
             </Tabs>

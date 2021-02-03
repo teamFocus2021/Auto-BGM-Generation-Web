@@ -19,7 +19,7 @@ const Frames: FC<Props> = (props) => {
     //버튼과 이미지 mapping
     var lists = Object.entries(frame).filter(([key,value])=> key != 'total' && key != 'time').map(
         ([key,value]) => <div><img src={`https://storage.googleapis.com/store_video2/${key}.jpg`} onClick={()=>sendTime(key)}/>
-        <AudioPlayer className="player" style={{'width':"400px"}} src={`http://sehwa98.dothome.co.kr/mp3/smile/${value}.mp3`} customAdditionalControls={[]} footer={`${value}`}/></div>
+        <AudioPlayer className="player" style={{'width':"400px"}} src={`http://sehwa98.dothome.co.kr/mp3/${value}.mp3`} customAdditionalControls={[]} footer={`${value}`}/></div>
        )
     
     return (
