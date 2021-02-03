@@ -8,13 +8,14 @@
     white-space: nowrap;
 }
 
-html {
+
+html, body {
+    height: 100%;
     background-image: url("./assets/background.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     font-family: 'Jost-VariableFont_wght';
 }
 div {
@@ -22,14 +23,9 @@ div {
 }
 
 .total_div {
-    width: 90%;
-    height: 100%;
-    margin: 10%;
+   height:98%;
 }
 
-.main_div {
-}
-`
 .image_div {
     margin-top: 10rem;
     width: 40%;

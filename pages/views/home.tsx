@@ -1,14 +1,17 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Home: FC = ({}) => {
 
   return (
-      <div className="container" style={{marginTop:"8rem"}}>
+      <Container fluid>
+      <div style={{marginTop:"8rem"}}>
 
-        <div className="row">
-          <div className="col-xl" style={{}}>
+        <Row>
+          <Col>
               <h4 style={{fontSize: '60px', lineHeight: '2.5rem'}}>Edit your video</h4>
               <h4 style={{fontSize: '60px', }}>Quickly & Easily</h4>
 
@@ -20,14 +23,15 @@ const Home: FC = ({}) => {
                   <a className="start_button">TRY YOUR VIDEO</a>
                 </Link>
               </div>
-          </div>
+          </Col>
 
-          <div className="col-xl">
-            <img style={{ width: "600px", height: "500px"}} src='http://sarac33.dothome.co.kr/image.png' />
-          </div>
-        </div>
+          <Col>
+            <img style={{ width: "600px", height: "410px"}} src='http://sarac33.dothome.co.kr/image.png' />
+          </Col>
+        </Row>
     
       </div>
+      </Container>
   );
 };
 
