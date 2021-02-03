@@ -83,7 +83,7 @@ function makeVideo(){
 function cutAudio(emotion, duration, frame_num, music_num) {
     !fs.existsSync('new') && fs.mkdirSync('new');
     id = music_num
-    if (shell.exec(`ffmpeg -i http://sehwa98.dothome.co.kr/mp3/${emotion}/${emotion}(${id}).mp3 -acodec copy -t ${duration} new/${frame_num}.mp3`).code !== 0) {
+    if (shell.exec(`ffmpeg -i http://sehwa98.dothome.co.kr/mp3/${emotion}/${emotion}${id}.mp3 -acodec copy -t ${duration} new/${frame_num}.mp3`).code !== 0) {
         shell.echo('Error: audio cut failed')
         shell.exit(1)
     }
