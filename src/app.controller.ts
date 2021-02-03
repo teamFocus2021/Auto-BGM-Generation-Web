@@ -42,8 +42,10 @@ export class AppController {
   public video(){
     console.log("serverside");
     const shell = require('shelljs');
-    shell.exec('python GoogleStorage.py') ;
+
     shell.exec('node PythonToJs.js') ;
+
+    shell.exec('python GoogleStorage.py') ;
   }
   //video processing main page: 비디오 processing 메인 페이지
   @Get('/make')

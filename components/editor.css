@@ -6,8 +6,29 @@
 
 .video_player{
     float: left;
+    position: relative;
 }
 
+.player-wrapper{
+    
+    height: 500px;
+
+    width: 500px;
+}
+
+.frame_list{
+
+    clear: both;
+
+    overflow: scroll;
+
+    border:solid 1px green;
+
+    height: 225px;
+
+    width: 800px;
+
+}
 
 .frame_list img{
     width: 100px;
