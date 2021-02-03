@@ -23,7 +23,7 @@ const MusicCategory: FC<Props> = (props) => {
     // console.log(frame['0001'])
 
     return (
-
+            <div style={{marginLeft: "8rem", marginRight: "3rem", fontFamily: "TitilliumWeb-Regular"}}>
             <Tabs selectedIndex={index} onSelect={index => setIndex(index)} style={{marginRight: "70px" }}>
                 <TabList>
                     <Tab>Smile / Laugh</Tab>
@@ -151,6 +151,7 @@ const MusicCategory: FC<Props> = (props) => {
                     <br/> */}
                 </TabPanel>
             </Tabs>
+        </div>
     )
 }
 
