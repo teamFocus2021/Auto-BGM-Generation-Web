@@ -6,19 +6,12 @@
 
 .video_player{
     float: left;
-    position: relative;
+    margin-bottom: 10000px;
 }
 
-.player-wrapper{
-    
-    height: 500px;
-
-    width: 500px;
-}
 
 .frame_list{
 
-    clear: both;
 
     overflow: scroll;
 
@@ -33,5 +26,6 @@
 .frame_list img{
     width: 100px;
     height: 100px;
+
     /* position: relative; */
 }

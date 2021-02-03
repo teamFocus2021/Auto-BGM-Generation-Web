@@ -16,7 +16,11 @@ pre_video = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
 
 print(pre_video)
 
-pre_video.delete()
+try:
+    pre_video.delete()
+
+except Exception:
+    print("no such file")
 
 
 video = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
@@ -42,7 +46,11 @@ for key in json_data.keys():
     print(key)
     frame_path = "upload/frames/"+ key +".jpg"
     frame = bucket.blob(key+".jpg") # 파일을 어떤 이름으롤 올릴건지
-    frame.delete()
+    try:
+        frame.delete()
+    except Exception:
+        print("no such file")
+
     frame.upload_from_filename(frame_path)
     frame.make_public()
     frame_url = frame.public_url

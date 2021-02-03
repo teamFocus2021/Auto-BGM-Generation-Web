@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Query, Render, UseInterceptors, UploadedFile, Res, Param } from '@nestjs/common';
+import { Controller, Get, Post, Query, Render, UseInterceptors, UploadedFile, Res, Param, Body } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { editFileName, videoFileFilter } from './utils/file-upload.utils';
@@ -42,10 +42,22 @@ export class AppController {
   public video(){
     console.log("serverside");
     const shell = require('shelljs');
-
     shell.exec('node PythonToJs.js') ;
-
     shell.exec('python GoogleStorage.py') ;
+  }
+
+  @Post('/video')
+  public editJSON(@Body() body:any){
+    const fs = require('fs');
+    const time = body.time;
+    const music_id = body.music_id;
+
+    console.log("selected music", music_id)
+    const data = JSON.parse(fs.readFileSync('upload/emotion/emotions.json', 'utf8'));
+    data[time] = music_id;
+    const result = JSON.stringify(data);
+    fs.writeFileSync('upload/emotion/emotions.json', result);
+
   }
   //video processing main page: 비디오 processing 메인 페이지
   @Get('/make')
@@ -109,4 +121,3 @@ export class AppController {
   //   return res.sendFile(file, { root: './upload/original_video' });
   // }
 }
-

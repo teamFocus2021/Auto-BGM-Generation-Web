@@ -6,30 +6,24 @@ import VideoPlayer from '../../components/video'
 import Frames from '../../components/frames'
 import Download from '../../components/download'
 
-type IndexProps = {
-    query : {
-        emotions: string
-    }
-}
 
-
-export default function Make(props: IndexProps) {
-    const { emotions } = props.query;
+export default function Make() {
+    
     const [time, setTime] = useState("0000");
-    function onTime(time: string){
+    const [emotion, setEmotion] = useState("smile");
+    function onTime(time: string, emotion:string){
         setTime(time);
+        setEmotion(emotion);
     }
     return (
         <>
-            <p>you selected a {time} frame</p>
-            {/* <div>
-                {emotions}
-            </div> */}
+            <p>you selected a {time} frame / {emotion}</p>
+            
             <div className="video_player">            
                 <VideoPlayer />
             </div>
             <div className="music_list">            
-                <MusicCategory time={time} onTime={onTime} />
+                <MusicCategory time={time} onTime={onTime} emotion={emotion} />
             </div>
             <div className="download">
                 <Download />
