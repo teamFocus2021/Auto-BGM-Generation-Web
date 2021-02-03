@@ -30,7 +30,7 @@ const MusicCategory: FC<Props> = (props) => {
     function mapping(emotion:string){
         return(
         <div>
-            <p>{time} {music_id} {emotion}</p>
+            
             <br/>                                    
             <AudioPlayer className="player" src={`http://sehwa98.dothome.co.kr/mp3/${emotion}1.mp3`} customAdditionalControls={[]} footer={<button className="select" onClick={() => onSelect(emotion+'1')}>select</button>}/>
             <br/>

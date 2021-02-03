@@ -5,6 +5,9 @@ import MusicCategory from '../../components/music_category'
 import VideoPlayer from '../../components/video'
 import Frames from '../../components/frames'
 import Download from '../../components/download'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
 export default function Make() {
@@ -17,20 +20,28 @@ export default function Make() {
     }
     return (
         <>
-            <p>you selected a {time} frame / {emotion}</p>
-            
-            <div className="video_player">            
-                <VideoPlayer />
-            </div>
-            <div className="music_list">            
-                <MusicCategory time={time} onTime={onTime} emotion={emotion} />
-            </div>
-            <div className="download">
-                <Download />
-            </div>
-            <div className="frame_list">            
-                <Frames onTime={onTime}/>
-            </div>
+        <Container style={{marginTop: "-8rem", fontFamily: "TitilliumWeb-Regular", color: "#232437"}}>
+            <Row>
+                <Col xs={8} style={{marginLeft: "-3rem"}}>
+                    <p>you selected a {time} frame / {emotion}</p>
+                    <div className="video_player">            
+                        <VideoPlayer />
+                    <div className="frame_list">            
+                    <Frames onTime={onTime}/>
+                    </div>
+                    </div>
+                </Col>
+                <Col xs={4} style={{marginLeft: "3rem"}}>
+                    <div className="music_list">            
+                        <MusicCategory time={time} onTime={onTime} emotion={emotion} />
+                    </div>
+                    {/*render button*/}
+                    <div className="download">
+                        <Download />
+                    </div>
+                </Col>
+            </Row>
+        </Container>
         </>
     )
 }

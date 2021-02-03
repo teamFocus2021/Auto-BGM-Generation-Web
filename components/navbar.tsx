@@ -33,13 +33,13 @@ const Navbar: FC = () => {
         </Link>
       </div>
 
-      {/*make video session*/}
+      {/*make video session
       <div className="nav_button">
         <Link href="/views/make" as="/make">
           <a className="nav_button">MAKE</a>
         </Link>
       </div>
-
+    */}
   </div>
   );
 };

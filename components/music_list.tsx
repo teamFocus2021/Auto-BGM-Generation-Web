@@ -9,18 +9,19 @@ import 'react-h5-audio-player/lib/styles.css';
 const MusicList: FC = () => {
 
     return (            
-            <Tabs>
-                <TabList>
+            <Tabs style={{marginLeft:"8rem", marginRight:"8rem"}}>
+                <TabList style={{fontFamily: "TitilliumWeb-Regular", color: "#232437"}}>
                     <Tab>Smile / Laugh</Tab>
                     <Tab>Neutral / Talking</Tab>
                     <Tab>Sad / Sorrow</Tab>
                     <Tab>Fear / Angry</Tab>
                     <Tab>Surprise / Disgust</Tab>
                 </TabList>
-                {/* <TabPanel>
+                <TabPanel>
                                   
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile1.mp3" customAdditionalControls={[]} footer="Smile1"/>
                     <br/>
+                {/* 
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile2.mp3" customAdditionalControls={[]} footer="Smile2"/>
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile3.mp3" customAdditionalControls={[]} footer="Smile3"/>
@@ -39,7 +40,9 @@ const MusicList: FC = () => {
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile10.mp3" customAdditionalControls={[]} footer="Smile10"/>
                     <br/>
-                </TabPanel>
+                */}
+                    </TabPanel>
+                {/*    
                 <TabPanel>
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral1.mp3" customAdditionalControls={[]} footer="Neutral1"/>

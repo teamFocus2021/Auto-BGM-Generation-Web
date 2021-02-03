@@ -1,1 +1,4 @@
 file 'new/0001.mp3'
+file 'new/0001.mp3'
+file 'new/0040.mp3'
+file 'new/0046.mp3'
