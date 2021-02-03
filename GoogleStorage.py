@@ -12,8 +12,14 @@ bucket = client.get_bucket('store_video2') # 버켓 이름 넣어줌
 
 # 동영상 파일 올리기
 
-video = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
+pre_video = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
 
+print(pre_video)
+
+pre_video.delete()
+
+
+video = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
 
 # Uploading from local file without open()
 video.upload_from_filename('upload/original_video/test.mp4') # 저장할 파일 이름 넣어줌
@@ -36,6 +42,7 @@ for key in json_data.keys():
     print(key)
     frame_path = "upload/frames/"+ key +".jpg"
     frame = bucket.blob(key+".jpg") # 파일을 어떤 이름으롤 올릴건지
+    frame.delete()
     frame.upload_from_filename(frame_path)
     frame.make_public()
     frame_url = frame.public_url

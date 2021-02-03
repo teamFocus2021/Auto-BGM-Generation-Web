@@ -6,8 +6,8 @@ import 'react-h5-audio-player/lib/styles.css';
 import frame from '../upload/emotion/emotions.json';
 
 interface Props {
-    time: string;
-    onTime: (time:string) => void;
+    time?: string;
+    onTime?: (time:string) => void;
 }
 
 //select 눌렀을 때 json파일 변경
