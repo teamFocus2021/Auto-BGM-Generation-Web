@@ -65,14 +65,7 @@ export class AppController {
   @Get('/make')
   @Render('make')
   public make() {
-    
-    const fs = require('fs');
-    const data = JSON.parse(fs.readFileSync('upload/emotion/emotions.json', 'utf8'));
-    const keys = Object.keys(data);
 
-    return {
-      emotions: keys      
-    }
   }
 
 
