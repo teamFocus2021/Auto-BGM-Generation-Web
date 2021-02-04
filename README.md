@@ -5,7 +5,7 @@
 - pip install
 
     ```
-    $ pip install ffmpeg opencv-python requests gcloud --upgrade google-cloud-storage httplib2
+    $ pip install ffmpeg requests gcloud --upgrade google-cloud-storage httplib2==0.15.0
     ```
 
 - npm install
