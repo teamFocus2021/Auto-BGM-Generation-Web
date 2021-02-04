@@ -21,7 +21,7 @@ const MusicList: FC = () => {
                                   
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile1.mp3" customAdditionalControls={[]} footer="Smile1"/>
                     <br/>
-                {/* 
+                
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile2.mp3" customAdditionalControls={[]} footer="Smile2"/>
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile3.mp3" customAdditionalControls={[]} footer="Smile3"/>
@@ -40,9 +40,9 @@ const MusicList: FC = () => {
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/smile10.mp3" customAdditionalControls={[]} footer="Smile10"/>
                     <br/>
-                */}
+               
                     </TabPanel>
-                {/*    
+                   
                 <TabPanel>
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/neutral1.mp3" customAdditionalControls={[]} footer="Neutral1"/>
@@ -134,7 +134,7 @@ const MusicList: FC = () => {
                     <br/>
                     <AudioPlayer className="player" src="http://sehwa98.dothome.co.kr/mp3/surprise10.mp3" customAdditionalControls={[]} footer="Surprise10"/>
                     <br/>
-                </TabPanel> */}
+                </TabPanel>
             </Tabs>
     )
 }

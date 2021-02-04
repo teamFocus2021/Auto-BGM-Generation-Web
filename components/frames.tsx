@@ -22,8 +22,8 @@ const Frames: FC<Props> = (props) => {
 
     //버튼과 이미지 mapping
     var lists = Object.entries(frame).filter(([key,value])=> key != 'total' && key != 'time').map(
-        ([key,value]) => <Col style={{marginRight: "-10rem"}}><img  style={{cursor: 'pointer', display:'inline-block' }} src={`https://storage.googleapis.com/store_video2/${key}.jpg`} onClick={()=>sendTime(key, value)}/>
-        <AudioPlayer className="player" style={{'width':"200px"}} src={`http://sehwa98.dothome.co.kr/mp3/${value}.mp3`} customAdditionalControls={[]} footer={`${value}`}/></Col>
+        ([key,value], index) => <Col style={{marginRight: "-10rem"}}><img  style={{cursor: 'pointer', display:'inline-block' }} src={`https://storage.googleapis.com/store_video2/${key}.jpg`} onClick={()=>sendTime(key, value)}/>
+        <AudioPlayer className="player" key={index} style={{'width':"200px"}} src={`http://sehwa98.dothome.co.kr/mp3/${value}.mp3`} customAdditionalControls={[]} footer={`${value}`}/></Col>
        )
     
     return (

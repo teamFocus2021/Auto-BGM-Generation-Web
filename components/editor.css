@@ -5,8 +5,15 @@
 
 .video_player{
     float: left;
-    margin-bottom: 10000px;
+
 }
+
+.result_player{
+    float: center;
+    width:600px;
+
+}
+
 
 
 .frame_list{

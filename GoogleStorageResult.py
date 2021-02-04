@@ -10,31 +10,17 @@ client = storage.Client()
 
 bucket = client.get_bucket('store_video2') # 버켓 이름 넣어줌
 
-# 중복 파일 지우기
-pre_video = bucket.blob('test.mp4') # 어떤 파일을 지울건지
-try:
-    pre_video.delete()
-except Exception:
-    print("no such file")
 
-pre_result_video = bucket.blob('result.mp4') # 어떤 파일을 지울건지
-try:
-    pre_result_video.delete()
-except Exception:
-    print("no such file")
 
-# 동영상 파일 올리기
-
-video = bucket.blob('test.mp4') # 파일을 어떤 이름으롤 올릴건지
-video.upload_from_filename('upload/original_video/test.mp4') # 저장할 파일 이름 넣어줌
-
+# 새로운 동영상 업로드
+video = bucket.blob('result.mp4') # 파일을 어떤 이름으롤 올릴건지
+video.upload_from_filename('upload/new_video/new_video.mp4') # 저장할 파일 이름 넣어줌
 video.make_public() # 공개 리소스로 지정
 url = video.public_url # 올라간 url
 
-print("동영상 URL : " + url)
+print("최종 동영상 URL : " + url)
 
-
-# 프레임 파일 올리기
+# 프레임 파일 / 초기 파일 지우기
 
 with open('upload/emotion/emotions.json') as json_file:
     json_data = json.load(json_file)
@@ -43,17 +29,20 @@ for key in json_data.keys():
     if( key == 'total' or key == 'time'):
         continue 
     print(key)
-    frame_path = "upload/frames/"+ key +".jpg"
-    frame = bucket.blob(key+".jpg") # 파일을 어떤 이름으롤 올릴건지
+    frame = bucket.blob(key+".jpg") # 어떤 파일을 지울건지
     try:
         frame.delete()
     except Exception:
-        print("no such file")
+        print("can not detect such file")
 
-    frame.upload_from_filename(frame_path)
-    frame.make_public()
-    frame_url = frame.public_url
-    print("frame URL : " + frame_url)
+# 동영상 초기 파일 지우기
+pre_video = bucket.blob('test.mp4') # 어떤 파일을 지울건지
+try:
+    pre_video.delete()
+except Exception:
+    print("no such file")
+
+
 
 
 # 해야할 것

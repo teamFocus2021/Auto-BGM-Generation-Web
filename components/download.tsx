@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { Button } from 'react-bootstrap';
+import Link from 'next/link';
+
 
 // component 가 mount 될 때 download : 0 으로 초기화
 const Download: FC = () => {
@@ -25,8 +27,9 @@ const Download: FC = () => {
     }, [download]);
 
     return (
-        // <Button variant="primary" className="download_button" onClick={onDownload}>download</Button>
+        <Link href="/views/result" as="/result">
         <button className="download_button" onClick={onDownload}>download</button>
+        </Link>
     )
 }
 
