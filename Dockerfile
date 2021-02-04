@@ -8,7 +8,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Seoul
 RUN apt-get install -y tzdata
 RUN apt-get -y install python3-pip ffmpeg curl git nodejs npm yarn
-RUN pip3 install ffmpeg opencv-python requests gcloud --upgrade google-cloud-storage httplib2
+RUN pip3 install ffmpeg opencv-python requests gcloud --upgrade google-cloud-storage
+RUN pip3 install -U httplib2==0.15.0
 
 ## Copy all files to WORKDIR(/app)
 COPY . .
